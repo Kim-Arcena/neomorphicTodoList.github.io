@@ -25,6 +25,7 @@ header{
 header h1{
     font-size: 2rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #new-task-form{
@@ -32,10 +33,13 @@ header h1{
 }
 
 input, button{
-    appearance: none;
-    background: none;
+    background-color: var(--background);
     outline: none;
     border: none;
+    border-radius:1.5rem;
+    padding: 1rem;
+    text-shadow: 1px 1px 0 var(--white);
+
 }
 
 #new-task-input{
@@ -43,12 +47,31 @@ input, button{
     height: 50px;
     width:50px;
     padding: 1rem;
-    border-radius:1.5rem;
     margin-right: 1rem;
+    font: size 1.5em;
     box-shadow:  inset 2px 2px 5px var(--shadow), inset -5px -5px 10px var(--white);
+    transition: all 0.2s ease-in-out;
 }
 
 #new-task-input:focus{
     box-shadow:  inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
+}
+
+#new-task-submit{
+    color:#61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px var(--white),  3px 3px 10px var(--shadow);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+    display: block;
+}
+
+#new-task-submit:hover{
+    box-shadow: -2px -2px 5px var(--white), 2px 2px 5px var(--shadow);
+}
+
+#new-task-submit:active{
+    box-shadow: inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
 }
 
