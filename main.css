@@ -41,9 +41,10 @@ header h1{
 
 #new-task-form{
     display: flex;
+    
 }
 
-input, button{
+input, button, textarea{
     background-color: var(--background);
     outline: none;
     border: none;
@@ -59,9 +60,11 @@ input, button{
     width:50px;
     padding: 1rem;
     margin: 1rem;
-    font: size 1.5em;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
     box-shadow:  inset 2px 2px 5px var(--shadow), inset -5px -5px 10px var(--white);
     transition: all 0.2s ease-in-out;
+
 }
 
 #new-task-input:focus{
@@ -75,7 +78,6 @@ button, input[type=submit]{
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     font-weight: 600;
-    display: block;
     margin: 1rem;
 }
 
@@ -120,4 +122,19 @@ main{
     margin: 1rem;
     box-shadow: -2px -2px 5px var(--white), 2px 2px 5px var(--shadow);
     border-radius: 1rem;
+}
+#tasks .task .content{
+    flex: 1 1 auto;
+}
+
+#tasks .task .content .text{
+    font-size:1.25rem;
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color:var(--shadow);
+    text-shadow: 1px 1px 1px var(--white);
 }
